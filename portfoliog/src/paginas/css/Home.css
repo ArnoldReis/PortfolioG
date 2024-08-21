@@ -1,14 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Elsie', serif; /* Aplicar a fonte globalmente */
+}
+
 .home-container {
-    text-align: center;
-    padding: 40px;
-  }
-  
-  .home-container h2 {
-    font-size: 2.5em;
-    color: #333;
-  }
-  
-  .home-container p {
-    font-size: 1.2em;
-    color: #666;
-  }
+  text-align: center;
+  padding: 20px; /* Ajustado para um valor adequado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+@keyframes gold-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-container h2 {
+  font-size: 20vw;
+  font-family: 'Elsie', serif;
+  background: linear-gradient(45deg, 
+      #f5cc00,    /* Cor dourada mais clara */
+      #e6b800,    /* Cor dourada média */
+      #d4af37,    /* Cor dourada tradicional */
+      #b8860b,    /* Dourado mais escuro */
+      #ffcc00     /* Reflexo brilhante */
+    );
+  -webkit-background-clip: text; /* Para navegadores WebKit */
+  background-clip: text; /* Para navegadores modernos */
+  color: transparent; /* Faz com que o texto use o gradiente de fundo */
+  background-size: 200% 200%; /* Ajusta o tamanho do gradiente para animação */
+  animation: gold-shimmer 5s infinite;
+  margin: 0;
+}
+
+.home-container p {
+  font-size: 1.2em;
+  color: #666;
+  margin: 20px 0; /* Adiciona um espaçamento ao redor do parágrafo */
+}
+
+.icon {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 900px; /* Ajustado para um valor razoável */
+  margin-top: 50px; /* Ajustado para um valor razoável */
+}
+
+.icon svg {
+  font-size: 5vw; 
+  color: #daa520; 
+}
