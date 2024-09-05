@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Elsie:wght@900&family=Baskervville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Elsie:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quando&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(
+        to right,
+        #1e1d1d 0%,
+        #2b2b2b 33%,
+        #403d3d 66%,
+        #1c1c1c 100%
+    );
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.top-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.top-nav ul li {
+    margin: 0 1rem;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.top-nav ul li a:hover {
+    color: #f39c12;
+}
+
+.logo {
+    font-family: "Elsie", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+}
+
+.bottom-nav ul li {
+    margin: 0 1rem;
+}
+
+.bottom-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    padding-top: 80px; /* Espaço para a navbar superior */
+    padding-bottom: 80px; /* Espaço para a navbar inferior */
+}
+
+section {
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Estilo quando a página for rolada */
+.scrolled {
+    background-color: black;
+}
+
+/*Pagina home */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#home h1 {
+    font-size: 20rem;
+    font-family: "Elsie", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(
+        to bottom,
+        #ecc440 0%,
+        #fffa8a 29%,
+        #ddac17 64%,
+        #ffff95 99%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#home h3 {
+    font-size: 3rem;
+    font-family: "Baskervville", serif;
+    margin: 0 16%;
+    background: linear-gradient(
+        to bottom,
+        #717171 0%,
+        #adadad 18%,
+        #939090 48%,
+        #d1d1d1 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -7rem; /* Ajuste para aproximar o RMC do Wolteg */
+}
+
+/* Pagina About */
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center;
+    padding: 2rem; /* Adiciona espaço ao redor do conteúdo */
+}
+
+#about #about-container h2 {
+    font-family: "Roboto Condensed", serif;
+    font-size: 90px;
+    margin-bottom: 2rem; /* Adiciona espaço abaixo do título */
+    background: linear-gradient(
+        to bottom,
+        #ecc440 0%,
+        #fffa8a 29%,
+        #ddac17 64%,
+        #ffff95 99%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#about #about-container p {
+    font-family: "Quando", serif;
+    font-size: 25px;
+    color: #fff1dd;
+    max-width: 900px; /* Limita a largura do parágrafo para evitar muito texto em linha */
+    margin: 0 auto; /* Centraliza o parágrafo horizontalmente */
+    margin-bottom: 2rem; /* Adiciona espaço abaixo do parágrafo */
+}
+
+#about #container-about {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+    gap: 2rem; /* Adiciona espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 2rem;
+}
+
+#about #missao,
+#about #visao,
+#about #valores {
+    background: linear-gradient(
+        to bottom,
+        #717171 0%,
+        #adadad 31%,
+        #d1d1d1 63%,
+        #939090 100%
+    );
+    width: 461px;
+    height: 286px;
+    border-radius: 41px;
+    padding: 3px; /* Adiciona espaço para a borda */
+    background-clip: padding-box; /* Garante que o gradiente não invada a borda */
+    border: 3px solid transparent; /* Define a largura da borda */
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+#about #missao::before,
+#about #visao::before,
+#about #valores::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 44px; /* Ajusta para cobrir a borda */
+    background: linear-gradient(
+        to bottom,
+        #ecc440 0%,
+        #fffa8a 29%,
+        #ddac17 64%,
+        #ffff95 99%
+    );
+    z-index: -1; /* Coloca o gradiente atrás do conteúdo */
+}
+
+#about #missao h3,
+#about #visao h3,
+#about #valores h3 {
+    font-family: "Roboto Condensed", serif;
+    font-size: 40px;
+    background: linear-gradient(
+        to bottom,
+        #ecc440 0%,
+        #fffa8a 29%,
+        #ddac17 64%,
+        #ffff95 99%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#about #missao p,
+#about #visao p,
+#about #valores p {
+    font-family: "Roboto Condensed", serif;
+    font-size: 25px;
+    color: #fff1dd;
+}
+
+#about p {
+    font-family: "Quando", serif;
+    font-size: 25px;
+    color: #fff1dd;
+    margin: 0 auto;
+    max-width: 1500px;
+}
