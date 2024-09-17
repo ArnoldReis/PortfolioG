@@ -10,7 +10,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    width: 100%;
+    overflow-x: hidden;
+}
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
     line-height: 1.6;
@@ -21,6 +24,8 @@ body {
         #403d3d 66%,
         #1c1c1c 100%
     );
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Estilos do Header */
@@ -50,6 +55,7 @@ header {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 20px;
     padding: 0.5rem;
     transition: color 0.3s;
 }
@@ -72,7 +78,7 @@ header {
 
 .logo {
     font-family: "Elsie", serif;
-    font-size: 1.5rem;
+    font-size: 24px;
     color: white;
 }
 
@@ -292,6 +298,7 @@ section {
     border-radius: 41px;
     padding: 3px;
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -718,12 +725,19 @@ section {
 
 /* Estilos para dispositivos extra pequenos (telefones pequenos) */
 @media (max-width: 480px) {
+    .top-nav ul li a {
+        padding: 0;
+        font-size: 8px;
+    }
+    .logo{
+        font-size: 12px;
+    }
     #home h1 {
         font-size: 4rem; /* Tamanho mínimo para o título */
     }
 
     #home h3 {
-        font-size: 1.2rem; /* Subtítulo pequeno */
+        font-size: 0.75rem; /* Subtítulo pequeno */
         margin-top: -1rem;
     }
 
