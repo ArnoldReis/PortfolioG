@@ -117,6 +117,29 @@ section {
     min-height: 100vh;
 }
 
+/*titulo*/
+.titulo h2{
+    font-family: "Roboto Condensed", serif;
+    font-weight: normal;
+    font-size: 90px;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(
+        to bottom,
+        #ecc440 0%,
+        #fffa8a 29%,
+        #ddac17 64%,
+        #ffff95 99%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
 /* Página Home */
 #home {
     display: flex;
@@ -483,28 +506,7 @@ section {
     border-bottom: none;
 }
 
-.titulo h2{
-    font-family: "Roboto Condensed", serif;
-    font-weight: normal;
-    font-size: 90px;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    background: linear-gradient(
-        to bottom,
-        #ecc440 0%,
-        #fffa8a 29%,
-        #ddac17 64%,
-        #ffff95 99%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-}
+
 
 
 /*imagens de serviço*/
@@ -687,14 +689,51 @@ section {
     }
 
     #about #about-container h2 {
-        font-size: 50px; /* Reduzindo ainda mais o título */
+        font-size: 45px; /* Reduzindo ainda mais o título */
     }
 
     #about #about-container p,
     #about #missao p,
     #about #visao p,
     #about #valores p {
-        font-size: 18px; /* Reduzindo o tamanho da fonte no About */
+        font-size: 12px; /* Reduzindo o tamanho da fonte no About */
+    }
+    #about p{
+        font-size: 12px;
+    }
+    #about #container-about{
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-tabs{
+        font-size: 15px;
+    }
+
+    .nav-tabs .nav-item .nav-link{
+        font-size: 10px;
+    }
+
+    .tab-pane{
+        font-size: 8px;
+    }
+    .container-p{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-p .h3{
+        font-size: 10px;
+    }
+
+    .container-p p{
+        font-size: 8px;
+    }
+    .titulo h2{
+        font-size: 40px;
+    }
+
+    .table th{
+        font-size: 12px;
     }
 
     .img img {
@@ -712,14 +751,6 @@ section {
 
     #Imagens-servicos {
         gap: 50px; /* Reduz o espaçamento entre as imagens */
-    }
-
-    .nav-tabs .nav-link {
-        font-size: 16px; /* Reduzindo ainda mais o texto das abas */
-    }
-
-    .table th {
-        font-size: 18px; /* Reduz o tamanho do texto das tabelas */
     }
 }
 
@@ -744,6 +775,7 @@ section {
     #about #about-container h2 {
         font-size: 40px; /* Título ainda menor */
     }
+
 
     .img img {
         max-width: 200px; /* Imagens menores */
