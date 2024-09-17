@@ -34,35 +34,68 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 999;
     background-color: transparent;
     transition: background-color 0.3s ease;
 }
 
-.top-nav ul {
+.navbar {
+    padding: 1rem;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(
+        to right,
+        #1e1d1d 0%,
+        #2b2b2b 33%,
+        #403d3d 66%,
+        #1c1c1c 100%
+    );
+}
+
+#navbarNav {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-nav {
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    padding: 1rem;
-    background-color: transparent;
+    padding: 0;
+    margin: 0;
 }
 
-.top-nav ul li {
-    margin: 0 1rem;
+.nav-item {
+    flex-grow: 1; /* Todos os itens crescem igualmente */
+    text-align: center;
 }
 
-.top-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: normal;
     font-size: 20px;
     padding: 0.5rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-.top-nav ul li a:hover {
-    color: #f39c12;
+.navbar-nav .nav-link:hover {
+    color: #f39c12 !important;
 }
+
+.navbar-brand {
+    font-family: "Elsie", serif;
+    font-size: 40px;
+    color: white !important;
+    font-weight: normal;
+    transition: color 0.3s ease;
+    text-align: center;
+    flex-grow: 1; /* O logo também crescerá igualmente */
+}
+
 
 /* Estilo para as abas ativas */
 .tab-link.active {
@@ -74,12 +107,6 @@ header {
 #topNavbar.scrolled {
     background-color: black;
     transition: background-color 0.3s;
-}
-
-.logo {
-    font-family: "Elsie", serif;
-    font-size: 24px;
-    color: white;
 }
 
 /* Estilos do Footer */
@@ -116,6 +143,7 @@ section {
     padding: 2rem;
     min-height: 100vh;
 }
+
 
 /*titulo*/
 .titulo h2{
@@ -219,22 +247,20 @@ section {
     margin-bottom: 2rem;
 }
 
-#about #container-about {
+#container-about {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 2rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 2rem;
 }
 
-/* Estilos para Missão, Visão e Valores */
-#about #missao,
-#about #visao,
-#about #valores {
-    border: 3px solid transparent;
+.card {
+    width: 60%;
+    border: 3px solid transparent !important;
     background: linear-gradient(
-                to bottom,
+                to right,
                 #717171 0%,
                 #adadad 31%,
                 #d1d1d1 63%,
@@ -248,43 +274,35 @@ section {
                 #ddac17 64%,
                 #ffff95 99%
             )
-            border-box;
-    width: 461px;
-    height: 320px;
-    border-radius: 41px;
-    padding: 20px;
+            border-box !important;
+    border-radius: 20px;
     overflow: hidden;
-    position: relative;
     margin: 0 auto;
-    overflow: hidden;
-
 }
 
-#about #missao h3,
-#about #visao h3,
-#about #valores h3 {
+.card-header {
     font-family: "Roboto Condensed", serif;
-    font-weight: normal;
-    font-size: 40px;
+    font-size: 30px;
     background: linear-gradient(
-        to bottom,
+        to right,
         #ecc440 0%,
         #fffa8a 29%,
         #ddac17 64%,
         #ffff95 99%
     );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #1c1c1c !important;
+    text-align: center;
 }
 
-#about #missao p,
-#about #visao p,
-#about #valores p {
-    font-family: "Roboto Condensed", serif;
-    font-weight: normal;
-    font-size: 25px;
-    color: #fff1dd;
+.card-body {
+    padding: 10px;
+}
 
+.card-text {
+    font-family: "Quando", serif;
+    font-size: 25px;
+    color: #1c1c1c !important;
+    text-align: justify;
 }
 
 #about p {
@@ -295,6 +313,7 @@ section {
     margin: 0 auto;
     max-width: 1500px;
 }
+
 
 /* Estilos para o contêiner das Tabs */
 #projects {
@@ -318,7 +337,7 @@ section {
     width: 100%; /* Ajuste para preencher o espaço disponível */
     max-width: 1506px; /* Define um limite máximo para a largura */
     height: auto; /* Ajusta a altura com base no conteúdo */
-    border-radius: 41px;
+    border-radius: 8px;
     padding: 3px;
     position: relative;
     overflow: hidden;
@@ -387,7 +406,7 @@ section {
 /* Estilos do conteúdo das abas */
 .tab-pane {
     padding: 2rem;
-    color: white;
+    color: #1c1c1c !important;
     font-size: 20px;
 }
 
@@ -406,7 +425,7 @@ section {
 
 /* Estilos gerais */
 .container-p .h3 {
-    color: white;
+    color: #1c1c1c !important;
     font-size: 30px;
 }
 
@@ -494,7 +513,7 @@ section {
     margin:auto;
     text-align: left;
     padding: 10px;
-    color: #FFF1DD;
+    color: #1c1c1c !important;
     border: none;
 }
 
@@ -627,10 +646,7 @@ section {
 }
 
 
-
-
-
-
+/* Transições */
 
 
 
@@ -704,6 +720,10 @@ section {
     #about #container-about{
         width: 100%;
         height: auto;
+    }
+    #projects{
+        padding: 0;
+        width: 90%;
     }
 
     .nav-tabs{
@@ -784,6 +804,12 @@ section {
     .nav-tabs .nav-link {
         font-size: 12px; /* Texto pequeno para as abas */
     }
+
+    #projects{
+        padding: 0;
+        width: 90%;
+    }
+
     .table{
     height: auto;
     border-radius: 30px;
