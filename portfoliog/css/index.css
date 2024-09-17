@@ -477,7 +477,7 @@ section {
     position: relative;
     margin: 0 auto;
     margin-top: 3rem;
-    border-radius: 68px;
+    border-radius: 50px;
     overflow: hidden;
 }
 
@@ -784,9 +784,13 @@ section {
     .nav-tabs .nav-link {
         font-size: 12px; /* Texto pequeno para as abas */
     }
-
+    .table{
+    height: auto;
+    border-radius: 30px;
+    }
     .table th {
-        font-size: 16px; /* Ajuste nas tabelas */
+        font-size: 8px; /* Ajuste nas tabelas */
+
     }
 }
 
