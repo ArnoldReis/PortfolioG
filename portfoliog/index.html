@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -67,11 +73,133 @@
                 aguardo de um contato para esclarecimentos de possíveis dúvidas ou elaboração de orçamentos,
                 colocamo-nos ao seu inteiro dispor.</p>
         </section>
+        <div class="titulo">
+            <h2>Areas de Atuação</h2>
+        </div>
+        <section id="projects" class="container mt-5">
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <p>Overview of your projects.</p>
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="tab1" data-toggle="tab" href="#tab1-content" role="tab"
+                        aria-controls="tab1-content" aria-selected="true">Serviços de Montagem e Manutenção
+                        industrial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab2" data-toggle="tab" href="#tab2-content" role="tab"
+                        aria-controls="tab2-content" aria-selected="false">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab3" data-toggle="tab" href="#tab3-content" role="tab"
+                        aria-controls="tab3-content" aria-selected="false">Locação de mão-de-obra</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="tab1-content" role="tabpanel" aria-labelledby="tab1">
+                    <p class="h3">Área Mecânica Industrial</p>
+                    <p>Montagens mecânicas, instalação de maquinas de embalagens, Latoarias, Recravadeira, envazadeira,
+                        transportadores de correias, roletes, bombas de vácuos, tubulações em geral inox ou aço carbono
+                        etc. </p>
+                    <div id="container-p">
+                        <p class="h3">Área Elétrica</p>
+                    </div>
+                    <div id="container-p" class="container-p">
+                        <p>• O Projeto é uma necessidade técnica fundamental para o início de qualquer tipo de
+                            empreendimento, assim o mesmo é a peça chave e principal para o seu sucesso. </p>
+                        <p>• Provemos-lhe toda a documentação necessária para realização, execução e aprovação de
+                            instalações industriais e comercias com: </p>
+                        <p>• Projeto Básico de Subestações / Cabines Primárias / Painéis Elétricos Projeto de Adequação
+                            e
+                            Modernização. </p>
+                        <p>• Projeto de Malhas de Aterramento (Análise e dimensionamento de Malhas de Aterramento) </p>
+                        <p>• Projeto do Sistema de Proteção contra Descargas Atmosféricas (SPDA) - Para-raios, </p>
+                        <p>• Projeto de Modernização do Sistema de Proteção, Especificação do Relés, Disjuntores
+                            Dimensionamento, Especificação de equipamentos, Bancos de Capacitores.</p>
+                        <p>• Elaboração de desenhos "As built"</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab2-content" role="tabpanel" aria-labelledby="tab2">
+                    <p>Na área mecânica, elétrica e embalagens. </p>
+                </div>
+                <div class="tab-pane fade" id="tab3-content" role="tabpanel" aria-labelledby="tab3">Area 3 content...
+                </div>
+            </div>
         </section>
+
+        <section id="container-servicos">
+            <div id="servicos">
+                <div class="titulo">
+                    <h2>Serviços Prestados</h2>
+                </div>
+                <table class="table table-striped">
+                    <tbody class="table-1">
+                        <tr>
+                            <th scope="row">• Manutenção de Unidades Fabris;</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Instalações mecânicas;</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Montagem de equipamentos de embalagens (Recravadeira, transportadores,
+                                Encaixotadeira, Gaseadeira, etc.);</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Montagem de sistemas de tubulações de gás inerte, ar comprimido;</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Tubulações inox e aço carbono;</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Reforma de Tesoura Krup;</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Reforma de Rotuladeira Burt;</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Reforma de Transportadores de correias e roletes inox e aço carbono;</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Instalações de Colocadora de Caps. (Laurent);</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Fornecimento de mão-de-obra (regime de administração);</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">• Instalação de tubulações de aço carbono e inox. Além dos itens citados
+                                acima, a
+                                empresa está apta a realizar serviços de outra natureza.</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="Imagens-servicos">
+            <div class="img img-1">
+                <div class="text">
+                    <h2>Example Project 1</h2>
+                </div>
+                <img src="https://via.placeholder.com/545x312" alt="Imagem 1">
+            </div>
+            <div class="img img-2">
+                <img src="https://via.placeholder.com/545x312" alt="Imagem 2">
+                <div class="text">
+                    <h2>Example Project 2</h2>
+                </div>
+            </div>
+            <div class="img img-3">
+                <div class="text">
+                    <h2>Example Project 3</h2>
+                </div>
+                <img src="https://via.placeholder.com/545x312" alt="Imagem 3">
+            </div>
+            <div class="img img-4">
+                <img src="https://via.placeholder.com/545x312" alt="Imagem 4">
+                <div class="text">
+                    <h2>Example Project 4</h2>
+                </div>
+            </div>
+        </section>
+
 
         <section id="contact">
             <h2>Contact Me</h2>
@@ -89,7 +217,13 @@
         </nav>
     </footer>
 
-    <script src="scripts.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

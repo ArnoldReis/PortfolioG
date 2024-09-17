@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Elsie:wght@900&family=Baskervville&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Elsie:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quando&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap");
@@ -22,6 +21,7 @@ body {
     );
 }
 
+/* Estilos do Header */
 header {
     position: fixed;
     width: 100%;
@@ -56,12 +56,25 @@ header {
     color: #f39c12;
 }
 
+/* Estilo para as abas ativas */
+.tab-link.active {
+    background-color: #bbb;
+    font-weight: bold;
+}
+
+/* Navbar com cor alterada ao rolar a página */
+#topNavbar.scrolled {
+    background-color: black;
+    transition: background-color 0.3s;
+}
+
 .logo {
-    font-family: "Elsie", sans-serif;
+    font-family: "Elsie", serif;
     font-size: 1.5rem;
     color: white;
 }
 
+/* Estilos do Footer */
 footer {
     position: fixed;
     bottom: 0;
@@ -96,13 +109,7 @@ section {
     min-height: 100vh;
 }
 
-/* Estilo quando a página for rolada */
-.scrolled {
-    background-color: black;
-}
-
-/*Pagina home */
-
+/* Página Home */
 #home {
     display: flex;
     flex-direction: column;
@@ -112,6 +119,7 @@ section {
 #home h1 {
     font-size: 20rem;
     font-family: "Elsie", serif;
+    font-weight: normal;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,6 +138,7 @@ section {
 #home h3 {
     font-size: 3rem;
     font-family: "Baskervville", serif;
+    font-weight: normal;
     margin: 0 16%;
     background: linear-gradient(
         to bottom,
@@ -140,23 +149,24 @@ section {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: -7rem; /* Ajuste para aproximar o RMC do Wolteg */
+    margin-top: -7rem;
 }
 
-/* Pagina About */
+/* Página About */
 #about {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 2rem; /* Adiciona espaço ao redor do conteúdo */
+    padding: 2rem;
 }
 
 #about #about-container h2 {
     font-family: "Roboto Condensed", serif;
+    font-weight: normal;
     font-size: 90px;
-    margin-bottom: 2rem; /* Adiciona espaço abaixo do título */
+    margin-bottom: 2rem;
     background: linear-gradient(
         to bottom,
         #ecc440 0%,
@@ -170,65 +180,60 @@ section {
 
 #about #about-container p {
     font-family: "Quando", serif;
+    font-weight: normal;
     font-size: 25px;
     color: #fff1dd;
-    max-width: 900px; /* Limita a largura do parágrafo para evitar muito texto em linha */
-    margin: 0 auto; /* Centraliza o parágrafo horizontalmente */
-    margin-bottom: 2rem; /* Adiciona espaço abaixo do parágrafo */
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 #about #container-about {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
-    gap: 2rem; /* Adiciona espaçamento entre os itens */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Alinha os itens verticalmente */
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
 }
 
+/* Estilos para Missão, Visão e Valores */
 #about #missao,
 #about #visao,
 #about #valores {
+    border: 3px solid transparent;
     background: linear-gradient(
-        to bottom,
-        #717171 0%,
-        #adadad 31%,
-        #d1d1d1 63%,
-        #939090 100%
-    );
+                to bottom,
+                #717171 0%,
+                #adadad 31%,
+                #d1d1d1 63%,
+                #939090 100%
+            )
+            padding-box,
+        linear-gradient(
+                to bottom,
+                #ecc440 0%,
+                #fffa8a 29%,
+                #ddac17 64%,
+                #ffff95 99%
+            )
+            border-box;
     width: 461px;
-    height: 286px;
+    height: 320px;
     border-radius: 41px;
-    padding: 3px; /* Adiciona espaço para a borda */
-    background-clip: padding-box; /* Garante que o gradiente não invada a borda */
-    border: 3px solid transparent; /* Define a largura da borda */
-    position: relative; /* Necessário para o pseudo-elemento */
-}
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
 
-#about #missao::before,
-#about #visao::before,
-#about #valores::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 44px; /* Ajusta para cobrir a borda */
-    background: linear-gradient(
-        to bottom,
-        #ecc440 0%,
-        #fffa8a 29%,
-        #ddac17 64%,
-        #ffff95 99%
-    );
-    z-index: -1; /* Coloca o gradiente atrás do conteúdo */
 }
 
 #about #missao h3,
 #about #visao h3,
 #about #valores h3 {
     font-family: "Roboto Condensed", serif;
+    font-weight: normal;
     font-size: 40px;
     background: linear-gradient(
         to bottom,
@@ -240,18 +245,295 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 #about #missao p,
 #about #visao p,
 #about #valores p {
     font-family: "Roboto Condensed", serif;
+    font-weight: normal;
     font-size: 25px;
     color: #fff1dd;
+
 }
 
 #about p {
     font-family: "Quando", serif;
+    font-weight: normal;
     font-size: 25px;
     color: #fff1dd;
     margin: 0 auto;
     max-width: 1500px;
+}
+
+/* Estilos para o contêiner das Tabs */
+#projects {
+    border: 3px solid transparent;
+    background: linear-gradient(
+                to bottom,
+                #717171 0%,
+                #adadad 31%,
+                #d1d1d1 63%,
+                #939090 100%
+            )
+            padding-box,
+        linear-gradient(
+                to bottom,
+                #ecc440 0%,
+                #fffa8a 29%,
+                #ddac17 64%,
+                #ffff95 99%
+            )
+            border-box;
+    width: 100%; /* Ajuste para preencher o espaço disponível */
+    max-width: 1506px; /* Define um limite máximo para a largura */
+    height: auto; /* Ajusta a altura com base no conteúdo */
+    border-radius: 41px;
+    padding: 3px;
+    position: relative;
+}
+
+
+
+/* Estilos para as abas (tabs) */
+.nav-tabs {
+    font-family: "Roboto Condensed", serif;
+    font-weight: normal;
+    font-size: 40px;
+    background: transparent;
+    align-items: center;
+    margin-bottom: 1rem; /* Espaço abaixo das abas */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-tabs .nav-item .nav-link {
+    font-family: "Roboto Condensed", serif;
+    font-weight: normal;
+    font-size: 30px;
+    max-width: 1015px;
+    height: auto;
+    background: linear-gradient(
+        to bottom,
+        #ecc440 0%,
+        #fffa8a 29%,
+        #ddac17 64%,
+        #ffff95 99%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tab-content {
+    font-family: "Quando", serif;
+    text-align: center;
+}
+
+/* Estilo dos tabs na visualização */
+.nav-tabs .nav-item {
+    width: 33%;
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    display: block;
+    padding: 1rem;
+    color: gold;
+    border: none; /* Removendo a borda padrão */
+    text-align: center;
+}
+
+.nav-tabs .nav-link.active {
+    color: gold;
+    border: none; /* Garantindo que não há borda na aba ativa */
+}
+
+.nav-tabs .nav-link:hover {
+    color: gold;
+    border: none; /* Garantindo que não há borda ao passar o mouse */
+}
+
+/* Estilos do conteúdo das abas */
+.tab-pane {
+    padding: 2rem;
+    color: white;
+    font-size: 20px;
+}
+
+.tab-pane p {
+    text-align: justify;
+}
+
+.tab-pane .h3 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.tab-pane #container-p {
+    margin-top: 3rem; /* Adiciona espaçamento acima da "Área Elétrica" */
+}
+
+/* Estilos gerais */
+.container-p .h3 {
+    color: white;
+    font-size: 30px;
+}
+
+.container-p {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(500px, 1fr)
+    ); /* Cria colunas flexíveis */
+    gap: 30px; /* Espaçamento entre os parágrafos */
+}
+
+.container-p p {
+    font-size: 20px;
+    text-align: justify; /* Justifica o texto */
+    margin: 0; /* Remove margens padrão dos parágrafos */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Area 2 */
+/*.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+*/
+/* Serviços Prestados */
+
+.table {
+    border: 3px solid transparent;
+    background: linear-gradient(
+                to bottom,
+                #717171 0%,
+                #adadad 31%,
+                #d1d1d1 63%,
+                #939090 100%
+            )
+            padding-box,
+        linear-gradient(
+                to bottom,
+                #ecc440 0%,
+                #fffa8a 29%,
+                #ddac17 64%,
+                #ffff95 99%
+            )
+            border-box;
+    width: 100%;
+    max-width: 1530px;
+    height: auto;
+    padding: 20px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border-radius: 68px;
+    overflow: hidden;
+}
+
+/* Estilizando as linhas da tabela */
+.table tr {
+    border: 2px solid #ecc440;
+    border-radius: 5px;
+}
+
+.table th {
+    font-family: "Quando", serif;
+    font-weight: normal;
+    font-size: 25px;
+    margin:auto;
+    text-align: left;
+    padding: 10px;
+    color: #FFF1DD;
+    border: none;
+}
+
+.table tr:first-child {
+    border-top: none;
+}
+
+.table tr:last-child {
+    border-bottom: none;
+}
+
+.titulo h2{
+    font-family: "Roboto Condensed", serif;
+    font-weight: normal;
+    font-size: 90px;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(
+        to bottom,
+        #ecc440 0%,
+        #fffa8a 29%,
+        #ddac17 64%,
+        #ffff95 99%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+/*imagens de serviço*/
+#Imagens-servicos {
+    display: flex;
+    flex-direction: column;
+    gap: 200px; /* Ajuste o espaço entre as imagens conforme necessário */
+}
+.img {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Ajuste o espaço entre a imagem e o texto conforme necessário */
+}
+.img img {
+    max-width: 545px; /* Ajuste a largura máxima conforme necessário */
+    height: auto;
+}
+.text {
+    flex: 1;
+    text-align: center ;
+}
+.img-1 .text {
+    order: 1; /* Título à direita da imagem */
+}
+.img-2 .text {
+    order: -1; /* Título à esquerda da imagem */
+}
+.img-3 .text {
+    order: 1; /* Título à direita da imagem */
+}
+.img-4 .text {
+    order: -1; /* Título à esquerda da imagem */
+}
+
+/* Para dispositivos móveis */
+@media (max-width: 768px) {
+    .table th {
+        font-size: 18px;
+        padding: 8px;
+    }
 }
