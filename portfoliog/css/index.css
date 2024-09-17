@@ -792,5 +792,17 @@ section {
         font-size: 8px; /* Ajuste nas tabelas */
 
     }
+
+    #contact{
+        font-size: 10px;
+        margin-left: 20px;
+    }
+    #contact p{
+        margin-top: 20px;
+        font-size: 7px;
+    }
+    #contact img{
+        width: 18px;
+    }
 }
 
