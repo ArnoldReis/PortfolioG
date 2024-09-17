@@ -141,7 +141,7 @@ section {
     font-size: 3rem;
     font-family: "Baskervville", serif;
     font-weight: normal;
-    margin: 0 16%;
+    margin: 0 17%;
     background: linear-gradient(
         to bottom,
         #717171 0%,
@@ -151,7 +151,7 @@ section {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: -7rem;
+    margin-top: -6rem;
 }
 
 /* Página About */
@@ -575,7 +575,7 @@ section {
     font-family: 'Preahvihear', sans-serif;
     font-size: 25px;
     margin-top: 500px;
-    margin-left: 320px;
+    margin-left: 100px;
     color: #FFF1DD;
 }
 
@@ -625,10 +625,122 @@ section {
 
 
 
-/* Para dispositivos móveis */
-@media (max-width: 768px) {
+/* Estilos para dispositivos médios (tablets) */
+@media (max-width: 1024px) {
+    #home h1 {
+        font-size: 10rem; /* Reduz o tamanho da fonte no Home */
+    }
+
+    #home h3 {
+        font-size: 1.5rem; /* Reduz o tamanho do subtítulo no Home */
+        margin-top: -3rem;
+    }
+
+    #about #about-container h2 {
+        font-size: 70px; /* Ajuste no título da seção About */
+    }
+
+    #about #about-container p,
+    #about #missao p,
+    #about #visao p,
+    #about #valores p {
+        font-size: 20px; /* Reduzindo tamanho da fonte para maior legibilidade */
+    }
+
+    #projects {
+        max-width: 100%; /* Preenche mais o espaço da tela */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 20px; /* Ajuste do tamanho da fonte das abas */
+    }
+
     .table th {
-        font-size: 18px;
-        padding: 8px;
+        font-size: 20px; /* Reduzindo o tamanho do texto nas tabelas */
+    }
+
+    .img img {
+        max-width: 400px; /* Reduz a largura máxima das imagens */
+    }
+
+    .img {
+        gap: 10px; /* Reduz o espaçamento entre imagem e texto */
     }
 }
+
+/* Estilos para dispositivos pequenos (smartphones) */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 6rem; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    #home h3 {
+        font-size: 1.5rem; /* Ajuste no subtítulo */
+        margin-top: -2rem;
+    }
+
+    #about #about-container h2 {
+        font-size: 50px; /* Reduzindo ainda mais o título */
+    }
+
+    #about #about-container p,
+    #about #missao p,
+    #about #visao p,
+    #about #valores p {
+        font-size: 18px; /* Reduzindo o tamanho da fonte no About */
+    }
+
+    .img img {
+        max-width: 300px; /* Ajuste na largura das imagens */
+    }
+
+    .img {
+        flex-direction: column; /* Coloca imagem e texto em colunas */
+        gap: 0; /* Remove o espaçamento entre imagem e texto */
+    }
+
+    .text {
+        text-align: center; /* Centraliza o texto */
+    }
+
+    #Imagens-servicos {
+        gap: 50px; /* Reduz o espaçamento entre as imagens */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 16px; /* Reduzindo ainda mais o texto das abas */
+    }
+
+    .table th {
+        font-size: 18px; /* Reduz o tamanho do texto das tabelas */
+    }
+}
+
+/* Estilos para dispositivos extra pequenos (telefones pequenos) */
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 4rem; /* Tamanho mínimo para o título */
+    }
+
+    #home h3 {
+        font-size: 1.2rem; /* Subtítulo pequeno */
+        margin-top: -1rem;
+    }
+
+    #about #about-container h2 {
+        font-size: 40px; /* Título ainda menor */
+    }
+
+    .img img {
+        max-width: 200px; /* Imagens menores */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 12px; /* Texto pequeno para as abas */
+    }
+
+    .table th {
+        font-size: 16px; /* Ajuste nas tabelas */
+    }
+}
+
