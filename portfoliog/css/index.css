@@ -338,6 +338,7 @@ section {
     max-width: 1506px; /* Define um limite máximo para a largura */
     height: auto; /* Ajusta a altura com base no conteúdo */
     border-radius: 8px;
+    margin: 0 auto;
     padding: 3px;
     position: relative;
     overflow: hidden;
@@ -647,7 +648,21 @@ section {
 
 
 /* Transições */
+@media (max-width: 1300px) {
+    #home h1 {
+        font-size: 12rem;
+        overflow: hidden; /* Reduz o tamanho da fonte no Home */
+    }
 
+    #home h3 {
+        font-size: 1.5rem; /* Reduz o tamanho do subtítulo no Home */
+        margin-top: -3rem;
+    }
+
+    #projects{
+        width: 80%;
+    }
+}
 
 
 /* Estilos para dispositivos médios (tablets) */
@@ -672,8 +687,9 @@ section {
         font-size: 20px; /* Reduzindo tamanho da fonte para maior legibilidade */
     }
 
-    #projects {
-        max-width: 100%; /* Preenche mais o espaço da tela */
+    #projects{
+        padding: 0;
+        width: 90%;
     }
 
     .nav-tabs .nav-link {
